@@ -45,11 +45,36 @@ SOMECODE is very easy to customize / extend if you would feel the need to do it.
 PERFORMANCE
 -----------
 
+During the 2016 election, SOMECODE topical, sentiment, scoring and other computations have been tested in up to 200,000 tweets per hour volume using a single $50 per month server (8gb RAM) where the computations required for every 10 minute cycle were generally completed in 20 seconds. 
+
 
 FUNCTIONS
 ---------
 
-SERVER/CLOUD:
+DATA COLLECTION
+...............
+
+search()
+stream()
+flatfile()
+timeline()
+
+
+DATA PROCESSING
+...............
+
+
+
+
+
+REPORTING
+.........
+
+
+
+
+
+
 
 
 
@@ -66,7 +91,10 @@ Some of the things SOMECODE takes care for you:
 - plot configuration
 - exception handling
 
+
+
 BUILT ON
+--------
 
 Frankly speaking, SOMECODE would not be possible without all the amazing technology solutions it's based on. What SOMECODE does, is put a few key technologies together, with "business logic" that came from working on over a thousand social media research projects since 2005. Somecode uses pandas, numpy, seaborn and matplotlib libraries heavily.
 
