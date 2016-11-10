@@ -60,8 +60,43 @@ flatfile()
 timeline()
 
 
-Example use
+search()
 ~~~~~~~~~~~
+
+Example use::
+
+    search("election",1000)
+
+This will search for 1000 latest tweets for keyword "election" and return a pandas dataframe with the following fields:: 
+
+
+    VARIABLE                        DTYPE
+    days_since_creation             int64
+    influence_score                 int64
+    reach_score                     int64
+    quality_score                   int64
+    retweet_count                   int64
+    text                           object
+    user_tweets                     int64
+    user_favourites                 int64
+    user_followers                  int64
+    user_following                  int64
+    user_listed                     int64
+    handle                         object
+    created_at             datetime64[ns]
+    default_profile                  bool
+    egg_account                      bool
+    description                    object
+    location                       object
+    timezone                       object
+    compound                      float64
+    neu                           float64
+    neg                           float64
+    pos                           float64
+
+
+
+
 
 items = single keyword, single user, list of keywords, list of users
 kind = either 'user' or 'keyword' (default is 'keyword')
