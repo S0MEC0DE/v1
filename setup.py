@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 #
-# Copyright (C) 2012-2016 Michael Waskom
 import os
 # temporarily redirect config directory to prevent matplotlib importing
 # testing that for writeable directory which results in sandbox error in
@@ -25,7 +24,7 @@ MAINTAINER = 'Mikko Kotila'
 MAINTAINER_EMAIL = 'mailme@mikkokotila.com'
 URL = 'http://botlab.io'
 LICENSE = 'MIT'
-DOWNLOAD_URL = 'https://github.com/botlabio/somecode/'
+DOWNLOAD_URL = 'https://github.com/S0MEC0DE/'
 VERSION = '0.9'
 
 try:
