@@ -60,6 +60,22 @@ flatfile()
 timeline()
 
 
+Example use
+~~~~~~~~~~~
+
+items = single keyword, single user, list of keywords, list of users
+kind = either 'user' or 'keyword' (default is 'keyword')
+
+You also need to set access_token, access_secret, consumer_secret
+and consumer_key (get it from http://apps.twitter.com)
+
+EXAMPLE SEARCH QUERIES: 
+
+users = ['3329715436','4064981488','1345822466','21587082']
+keywords = ['hillary','trump']
+
+
+
 DATA PROCESSING
 ...............
 
