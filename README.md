@@ -1,3 +1,7 @@
+TL;DR
+
+    pip install somecode 
+
 [![Screen Shot 2016-10-29 at 19.59.52.png](https://s13.postimg.org/dlz5er05z/Screen_Shot_2016_10_29_at_19_59_52.png)](https://postimg.org/image/jzo8i051v/)
 
 SOMECODE is a research platform for serious observation and analysis of Twitter data. SOMECODE brings together 9 years of unbroken continuity in developing social media research tools. Previous tools and processes developed by the contributor team are in daily use by many FORTUNE100 companies and major advertising agencies. SOMECODE is the solution we always wanted to build, but due to the kinds of restraints commercial entities have, never got to. 
