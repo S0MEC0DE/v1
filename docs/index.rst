@@ -54,21 +54,10 @@ FUNCTIONS
 DATA COLLECTION
 ...............
 
-search()
-stream()
-flatfile()
-timeline()
+DATAPOINTS
+-----------
 
-
-search()
-~~~~~~~~~~~
-
-Example use::
-
-    search("election",1000)
-
-This will search for 1000 latest tweets for keyword "election" and return a pandas dataframe with the following fields:: 
-
+All of the 'data collection' methods ('search','stream','timeline','flatfile') return a pandas dataframe with direct signals from Twitter, together with SOMECODE scores and other inferred metrics.  
 
     VARIABLE                        DTYPE
     days_since_creation             int64
@@ -93,6 +82,23 @@ This will search for 1000 latest tweets for keyword "election" and return a pand
     neu                           float64
     neg                           float64
     pos                           float64
+
+
+
+search()
+stream()
+flatfile()
+timeline()
+
+
+search()
+~~~~~~~~~~~
+
+Example use::
+
+    search("election",1000)
+
+This will search for 1000 latest tweets for keyword "election" and return a pandas dataframe with the following fields:: 
 
 
 
