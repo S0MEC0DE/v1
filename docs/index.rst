@@ -50,7 +50,6 @@ FUNCTIONS
 ---------
 
 SERVER/CLOUD:
-*************
 
 
 
