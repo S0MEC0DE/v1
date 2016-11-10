@@ -1,5 +1,6 @@
+========
 OVERVIEW
-========================================
+========
 
 SOMECODE is a research platform for serious observation and analysis of Twitter data. SOMECODE brings together 9 years of unbroken continuity in developing social media research tools. Previous tools and processes developed by the contributor team are in daily use by many FORTUNE100 companies and major advertising agencies. SOMECODE is the solution we always wanted to build, but due to the kinds of restraints commercial entities have, never got to. ::
 
@@ -7,6 +8,7 @@ SOMECODE is a research platform for serious observation and analysis of Twitter 
 
 All you need to have is Python 2.7 and the somecode installation will take care of all the dependencies. 
 
+--------
 BENEFITS
 --------
 
@@ -21,6 +23,7 @@ With one command from idea to looking at results of regression analysis, advance
 
 SOMECODE is built by researchers for researchers and is very easy to extend / customize to suit specific needs. For most research scopes SOMECODE will work "out of the box". It has very few depedencies (below) and takes minutes to deploy for your first research project.
 
+---------------
 GETTING STARTED
 ---------------
 
@@ -42,22 +45,21 @@ SOMECODE is very easy to customize / extend if you would feel the need to do it.
 
 100% fun, 0% mindless wrangling.
 
+-----------
 PERFORMANCE
 -----------
 
 During the 2016 election, SOMECODE topical, sentiment, scoring and other computations have been tested in up to 200,000 tweets per hour volume using a single $50 per month server (8gb RAM) where the computations required for every 10 minute cycle were generally completed in 20 seconds. 
 
 
-FUNCTIONS
+---------
+x. FUNCTIONS
 ---------
 
-DATA COLLECTION
-...............
+x.x. DATAPOINTS
+----------- 
 
-DATAPOINTS
------------
-
-All of the 'data collection' methods ('search','stream','timeline','flatfile') return a pandas dataframe with direct signals from Twitter, together with SOMECODE scores and other inferred metrics.  
+All of the 'data collection' methods ('search','stream','timeline','flatfile') return a pandas dataframe with direct signals from Twitter, together with SOMECODE scores and other inferred metrics.::
 
     VARIABLE                        DTYPE
     days_since_creation             int64
@@ -84,24 +86,30 @@ All of the 'data collection' methods ('search','stream','timeline','flatfile') r
     pos                           float64
 
 
+DATA COLLECTION
+---------------
+
+There are four ways to get data in to SOMECODE: 
+
+- a one-time search (use Twitter Rest API
+- stream for some time (use Twitter streaming API)
+- timeline search 
+- 
+
 
 search()
 stream()
 flatfile()
 timeline()
 
-
 search()
-~~~~~~~~~~~
+
 
 Example use::
 
     search("election",1000)
 
 This will search for 1000 latest tweets for keyword "election" and return a pandas dataframe with the following fields:: 
-
-
-
 
 
 items = single keyword, single user, list of keywords, list of users
@@ -116,24 +124,11 @@ users = ['3329715436','4064981488','1345822466','21587082']
 keywords = ['hillary','trump']
 
 
-
 DATA PROCESSING
 ...............
 
-
-
-
-
 REPORTING
 .........
-
-
-
-
-
-
-
-
 
 
 Some of the things SOMECODE takes care for you:
@@ -147,7 +142,6 @@ Some of the things SOMECODE takes care for you:
 - pipeline process automation
 - plot configuration
 - exception handling
-
 
 
 BUILT ON
