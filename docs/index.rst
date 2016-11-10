@@ -42,7 +42,15 @@ SOMECODE is very easy to customize / extend if you would feel the need to do it.
 
 100% fun, 0% mindless wrangling.
 
+PERFORMANCE
+-----------
 
+
+FUNCTIONS
+---------
+
+SERVER/CLOUD:
+*************
 
 
 
