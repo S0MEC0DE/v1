@@ -1,37 +1,28 @@
-SOMECODE - Serious Social Media Research
+OVERVIEW
 ========================================
 
 SOMECODE is a research platform for serious observation and analysis of Twitter data. SOMECODE brings together 9 years of unbroken continuity in developing social media research tools. Previous tools and processes developed by the contributor team are in daily use by many FORTUNE100 companies and major advertising agencies. SOMECODE is the solution we always wanted to build, but due to the kinds of restraints commercial entities have, never got to. ::
 
-    pip install python
+    pip install somecode
 
-The regular text continues here. 
-
-You can get started with:
-
-Beginner Level:
-Moderate Level
-Advanved Level 
-
-
-
-
-
+All you need to have is Python 2.7 and the somecode installation will take care of all the dependencies. 
 
 BENEFITS
 --------
 
-Get started with serious social media research in minutes
-Equal or better capabilities vs. best industrial solution
-Up to 10 million tweets per day with single API key
-Optmized for minimizing out-of-scope time use (configuration, data wrangling, etc.)
-Supports both streaming and rest API endpoints for both status (tweet) and user objects
-Provides an ideal environment for academic research and publication
 With one command from idea to looking at results of regression analysis, advanced plotting, sentiment analysis, etc. etc.
+
+- Get started with serious social media research in minutes
+- Equal or better capabilities vs. best industrial solution
+- Up to 10 million tweets per day with single API key
+- Optmized for minimizing out-of-scope time use (configuration, data wrangling, etc.)
+- Supports both streaming and rest API endpoints for both status (tweet) and user objects
+- Provides an ideal environment for academic research and publication
 
 SOMECODE is built by researchers for researchers and is very easy to extend / customize to suit specific needs. For most research scopes SOMECODE will work "out of the box". It has very few depedencies (below) and takes minutes to deploy for your first research project.
 
-GETTING STARTED WITH SOMECODE IS EASY
+GETTING STARTED
+---------------
 
 LAPTOP OPTION:
 
@@ -60,7 +51,7 @@ Some of the things SOMECODE takes care for you:
 - plot configuration
 - exception handling
 
-WHAT IS SOMECODE MADE OF
+BUILT ON
 
 Frankly speaking, SOMECODE would not be possible without all the amazing technology solutions it's based on. What SOMECODE does, is put a few key technologies together, with "business logic" that came from working on over a thousand social media research projects since 2005. Somecode uses pandas, numpy, seaborn and matplotlib libraries heavily.
 
