@@ -24,20 +24,28 @@ SOMECODE is built by researchers for researchers and is very easy to extend / cu
 GETTING STARTED
 ---------------
 
-LAPTOP OPTION:
+DESKTOP:
+........
 
-SOMECODE runs on any regular low-end laptop with a common web browser. Tested on Linux and Mac OS X.
+SOMECODE runs on any regular low-end laptop with a common web browser. Tested on Linux and Mac OS X. Jupyter is highly recommended. 
 
-SERVER OPTION:
+SERVER/CLOUD:
+.............
 
 SOMECODE runs on Amazon Nano (or similar) for $5 per month. Tested on Ubuntu 14.04LTS
 
-For both options:
+For both options::
 
-pip install somecode 
+    pip install somecode 
+
 SOMECODE is very easy to customize / extend if you would feel the need to do it. Even if you are a beginner python learner.
 
 100% fun, 0% mindless wrangling.
+
+
+
+
+
 
 Some of the things SOMECODE takes care for you:
 
