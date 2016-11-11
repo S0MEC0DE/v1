@@ -59,6 +59,14 @@ Depending on the need of the researcher at the time of use, a typical scenario i
 GETTING STARTED
 ---------------
 
+The easiest case is::
+
+	pip install somecode
+
+The hardest case is::
+
+	sudo apt-get update -y; sudo apt-get install python-pip -y; sudo pip install --upgrade pip; sudo pip install somecode; sudo apt-get  update; sudo apt-get install  python-dev -y; sudo pip install entropy; import nltk; nltk.download('vader_lexicon')
+
 DESKTOP
 .......
 
