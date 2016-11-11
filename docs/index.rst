@@ -8,13 +8,28 @@ SOMECODE is a research platform for serious observation and analysis of Twitter 
 
 All you need to have is Python 2.7 and the somecode installation will take care of all the dependencies. 
 
+
+---------
+GREAT FOR
+---------
+
+Somecode is great for researching a variety of topics, for example: 
+
+- Public figures 
+- Brands and organizations 
+- Special events (e.g. election) 
+- Emerging or ongoing crisis 
+- Ideas (e.g. radicalization) 
+
+Somecode comes with built-in scoring system and various signals that are specifically targeted at identifying bot, spam and troll accounts in Twitter, to help researchers better understand malicious techniques used in computer-aided propaganda. 
+
+
 --------
 BENEFITS
 --------
 
-With one command from idea to looking at results of regression analysis, advanced plotting, sentiment analysis, etc. etc.
+Somecode takes you from an idea to understanding with one command in 20 seconds and allows any researher to start with serious social media research in minutes from being a total novice. 
 
-- Get started with serious social media research in minutes
 - Equal or better capabilities vs. best industrial solution
 - Up to 10 million tweets per day with single API key
 - Optmized for minimizing out-of-scope time use (configuration, data wrangling, etc.)
@@ -22,6 +37,63 @@ With one command from idea to looking at results of regression analysis, advance
 - Provides an ideal environment for academic research and publication
 
 SOMECODE is built by researchers for researchers and is very easy to extend / customize to suit specific needs. For most research scopes SOMECODE will work "out of the box". It has very few depedencies (below) and takes minutes to deploy for your first research project.
+
+
+----------------
+TYPICAL WORKFLOW
+----------------
+
+Depending on the need of the researcher at the time of use, a typical scenario involves no more than 2 or 3 function calls and depending on the size of the sample and the function used for collecting the data, no more than 1 minute. Such a scenario may involve: 
+
+1. Use one of the 'data collector' functions to get the data you need
+
+2. Use one or more of the 'report' functions to visualize the data 
+
+3. Based on the findings, use one of the 'data collectors' to get drill-down data 
+
+4. Export report and dataset for reference / later use 
+
+
+--------
+FEATURES
+--------
+
+Collecting, processing and analyzing Twitter data comes with many caveats and obstacles, a factor that has kept most researchers oblivious to the potential Twitter data has. Many of Somecode's features are related with making all of that completely dissapear.
+
+Some of the things we've figured out for you include: 
+
+- System performance
+- Twitter API rate-limit mangagement 
+- JSON parsing
+- Signal selection
+- Plot configuration 
+ 
+
+
+---------
+DATAFRAME
+---------
+
+
+
+
+
+
+
+
+
+data structures
+datatypes
+character types
+system performance
+API rate-limit management
+JSON parsing
+pipeline process automation
+plot configuration
+exception handling
+
+
+
 
 GETTING STARTED
 ---------------
