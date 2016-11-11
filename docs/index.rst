@@ -63,9 +63,15 @@ The easiest case is::
 
 	pip install somecode
 
-The hardest case is::
+The hardest case is to first run this in shell::
 
-	sudo apt-get update -y; sudo apt-get install python-pip -y; sudo pip install --upgrade pip; sudo pip install somecode; sudo apt-get  update; sudo apt-get install  python-dev -y; sudo pip install entropy; import nltk; nltk.download('vader_lexicon')
+	sudo apt-get update -y; sudo apt-get install python-pip -y; sudo pip install --upgrade pip; sudo pip install somecode; sudo apt-get  update; sudo apt-get install  python-dev -y; sudo pip install entropy; 
+
+And then run this in Jupyter / python shell::
+
+	import nltk; nltk.download('vader_lexicon'); nltk.download('vader_lexicon'); 
+	
+It will take less than a minute and because we're only using common packages, the installation should be painless in any case. 
 
 DESKTOP
 .......
