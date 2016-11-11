@@ -150,10 +150,9 @@ All of the 'data collection' methods ('search','stream','timeline','flatfile') r
 | pos                    | sentiment   | any        |
 +------------------------+-------------+------------+
 
-
----------
+=========
 FUNCTIONS
----------
+=========
 
 There are four categories of functions in SOMECODE: 
 
@@ -162,7 +161,7 @@ There are four categories of functions in SOMECODE:
 - Reporting 
 - Export 
 
-
+---------------
 DATA COLLECTION
 ---------------
 
@@ -182,7 +181,24 @@ There are four ways to get data in to SOMECODE.
 +------------------------+-------------------------+-------------------------+
 
 
-# search()
+To get 1000 tweets for keyword "election"::
+
+    some.search("election",1000)
+
+To pen a stream with keyword "election"::
+
+	some.stream("election")
+
+To get maximum number of tweets from @realdonaldtrump timeline:: 
+
+    some.timeline("realdonaldtrump")
+
+To get tweets from a file:: 
+
+	some.flatfile("some_stream.json")
+
+search()
+........
 
 An example of use to get 1000 tweets for keyword "election"::
 
@@ -191,10 +207,10 @@ An example of use to get 1000 tweets for keyword "election"::
 search() has three parameters: 
 
 +------------------------+-------------+------------+
-| Header row, column 1   | Default     | notes      |
-| (header rows optional) |             |            |
+| 						 |      	   | 	        |
+| PARAMETER              | DEFAULT     | OPTIONS    |
 +========================+=============+============+
-| keyword                | *           | 1  or list |
+| keyword                |  *          | 1  or list |
 +------------------------+-------------+------------+
 | max_tweets             | 200         | 0 - 3200   |
 +------------------------+-------------+------------+
@@ -204,58 +220,3 @@ search() has three parameters:
 (*)required input
 
 
-# stream()
-
-
-
-
-
-
-
-
-
-
-stream()
-flatfile()
-timeline()
-
-Example use
-
-search("election",1000)
-
-items = single keyword, single user, list of keywords, list of users
-kind = either 'user' or 'keyword' (default is 'keyword')
-
-You also need to set access_token, access_secret, consumer_secret
-and consumer_key (get it from http://apps.twitter.com)
-
-EXAMPLE SEARCH QUERIES: 
-
-users = ['3329715436','4064981488','1345822466','21587082']
-keywords = ['hillary','trump']
-
-
-DATA PROCESSING
----------------
-
-REPORTING
----------
-
-EXPORT
-------
-
-
-
------------
-PERFORMANCE
------------
-
-During the 2016 election, SOMECODE topical, sentiment, scoring and other computations have been tested in up to 200,000 tweets per hour volume using a single $50 per month server (8gb RAM) where the computations required for every 10 minute cycle were generally completed in 20 seconds. 
-
---------
-BUILT ON
---------
-
-Frankly speaking, SOMECODE would not be possible without all the amazing technology solutions it's based on. What SOMECODE does, is put a few key technologies together, with "business logic" that came from working on over a thousand social media research projects since 2005. Somecode uses pandas, numpy, seaborn and matplotlib libraries heavily.
-
-Other than that, dependent on the system, you should have minimal dependencies to worry about. Also if you're not using it already, I highly recommend Jupyter (http://jupyter.org/). It helps make programming much more about fun, and less about frustration.
