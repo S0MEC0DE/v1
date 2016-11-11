@@ -67,33 +67,64 @@ Some of the things we've figured out for you include:
 - JSON parsing
 - Signal selection
 - Plot configuration 
- 
+
+The 'data collector' functions all return the same format pandas DataFrame, which means that you can use any plots, models, etc. to go where you want to go with the data.  
 
 
----------
-DATAFRAME
----------
+-----------------
+DATAFRAME COLUMNS
+-----------------
 
+All of the 'data collection' methods ('search','stream','timeline','flatfile') return a pandas dataframe with direct signals from Twitter, together with SOMECODE scores and other inferred metrics.
 
-
-
-
-
-
-
-
-data structures
-datatypes
-character types
-system performance
-API rate-limit management
-JSON parsing
-pipeline process automation
-plot configuration
-exception handling
-
-
-
++------------------------+-------------+------------+
+|                        |             |            |
+| VARIABLE NAME          | ABOUT       | DTYPE      |
++========================+=============+============+
+| days_since_creation    | user        | int64      |
++------------------------+-------------+------------+
+| influence_score        | scores      | int64      |
++------------------------+-------------+------------+
+| reach_score            | scores      | int64      |
++------------------------+-------------+------------+
+| qualit_score           | scores      | int64      |
++------------------------+-------------+------------+
+| retweet_count          | tweet       | int64      |
++------------------------+-------------+------------+
+| text                   | tweet       | object     |
++------------------------+-------------+------------+
+| user_tweets            | user        | int64      |
++------------------------+-------------+------------+
+| user_favourites        | user        | int64      |
++------------------------+-------------+------------+
+| user_followers         | user        | int64      |
++------------------------+-------------+------------+
+| user_following         | user        | int64      |
++------------------------+-------------+------------+
+| user_listed            | user        | int64      |
++------------------------+-------------+------------+
+| handle                 | user        | object     |
++------------------------+-------------+------------+
+| created_at             | user        | datetime64 |
++------------------------+-------------+------------+
+| default_profile        | user        | bool       |
++------------------------+-------------+------------+
+| egg_account            | user        | bool       |
++------------------------+-------------+------------+
+| description            | user        | object     |
++------------------------+-------------+------------+
+| location               | user        | object     |
++------------------------+-------------+------------+
+| timezone               | user        | object     |
++------------------------+-------------+------------+
+| compound               | sentiment   | float      |
++------------------------+-------------+------------+
+| neu                    | sentiment   | any        |
++------------------------+-------------+------------+
+| neg                    | sentiment   | any        |
++------------------------+-------------+------------+
+| pos                    | sentiment   | any        |
++------------------------+-------------+------------+
 
 GETTING STARTED
 ---------------
@@ -126,35 +157,6 @@ During the 2016 election, SOMECODE topical, sentiment, scoring and other computa
 ---------
 FUNCTIONS
 ---------
-
-DATAPOINTS
----------- 
-
-All of the 'data collection' methods ('search','stream','timeline','flatfile') return a pandas dataframe with direct signals from Twitter, together with SOMECODE scores and other inferred metrics.::
-
-    VARIABLE                        DTYPE
-    days_since_creation             int64
-    influence_score                 int64
-    reach_score                     int64
-    quality_score                   int64
-    retweet_count                   int64
-    text                           object
-    user_tweets                     int64
-    user_favourites                 int64
-    user_followers                  int64
-    user_following                  int64
-    user_listed                     int64
-    handle                         object
-    created_at             datetime64[ns]
-    default_profile                  bool
-    egg_account                      bool
-    description                    object
-    location                       object
-    timezone                       object
-    compound                      float64
-    neu                           float64
-    neg                           float64
-    pos                           float64
 
 DATA COLLECTION
 ---------------
