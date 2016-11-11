@@ -111,7 +111,7 @@ All of the 'data collection' methods ('search','stream','timeline','flatfile') r
 +------------------------+-------------+------------+
 | reach_score            | scores      | int64      |
 +------------------------+-------------+------------+
-| qualit_score           | scores      | int64      |
+| quality_score          | scores      | int64      |
 +------------------------+-------------+------------+
 | retweet_count          | tweet       | int64      |
 +------------------------+-------------+------------+
@@ -220,13 +220,64 @@ To compute entropy and other singals for textual data::
 
 	some.keywords(df)
 
-Various additional semantic analysis is conducted in cooc_plot() reporting function. 
+Various additional semantic analysis is possible as part of freq_plot() and cooc_plot() reporting function. 
 
 
 ---------
 REPORTING
 ---------
 
+There are two kinds of reporting capabilities; plots and tables. The tables come from the pretty.py library and plots are heavily customized Seaborn and Matplotlib plots. 
+
++------------------------+-------------------------+
+|                        |                         |
+| FUNCTION               | KIND OF REPORT          |
++========================+=========================+
+| age_plot()             | Bubble chart            |
++------------------------+-------------------------+
+| bars()                 | Bar chart               |
++------------------------+-------------------------+
+| cooc_plot()            | Bubble chart            |
++------------------------+-------------------------+
+| freq_plot()		 | Side-by-side bar 	   |
++------------------------+-------------------------+
+| hist_plot()		 | Histogram 	 	   |
++------------------------+-------------------------+
+| neg_plot()		 | Bubble chart 	   |
++------------------------+-------------------------+
+| neg2_plot() 		 | Bar chart 		   |
++------------------------+-------------------------+
+| retweet_plot()	 | Bubble chart		   |
++------------------------+-------------------------+
 
 
+For the Pretty descriptive tables:
 
++------------------------+-------------------------+
+|                        |                         |
+| FUNCTION               | KIND OF REPORT          |
++========================+=========================+
+| pretty.header()        | Produces pretty header  |
++------------------------+-------------------------+
+| pretty.table()         | Produces pretty table   |
++------------------------+-------------------------+
+| pretty.data()          | Prepares data for table |
++------------------------+-------------------------+
+| pretty.toggle()        | Hide code cells         |
++------------------------+-------------------------+
+| pretty.warnings()      | Turns of warnings       |
++------------------------+-------------------------+
+
+-----------
+PERFORMANCE
+-----------
+
+During the 2016 election, SOMECODE topical, sentiment, scoring and other computations have been tested in up to 200,000 tweets per hour volume using a single $50 per month server (8gb RAM) where the computations required for every 10 minute cycle were generally completed in 20 seconds. 
+
+--------
+BUILT ON
+--------
+
+Frankly speaking, SOMECODE would not be possible without all the amazing technology solutions it's based on. What SOMECODE does, is put a few key technologies together, with "business logic" that came from working on over a thousand social media research projects since 2005. Somecode uses pandas, numpy, seaborn and matplotlib libraries heavily.
+
+Other than that, dependent on the system, you should have minimal dependencies to worry about. Also if you're not using it already, I highly recommend Jupyter (http://jupyter.org/). It helps make programming much more about fun, and less about frustration.
