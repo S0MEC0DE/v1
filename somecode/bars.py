@@ -1,3 +1,5 @@
+import pandas as pd
+
 def bars(data,color='black'):
 
     data = pd.DataFrame(data.value_counts())

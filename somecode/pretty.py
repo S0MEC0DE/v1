@@ -1,3 +1,5 @@
+import pandas as pd
+
 def data(data,columns=''):
     
     """
@@ -14,8 +16,7 @@ def data(data,columns=''):
       df['quality_score','influence_score','reach_score']
     
     """
-    import pandas as pd
-    
+       
     if data.shape[1] != 3:
         if len(columns) !=3:
             if data.shape[1] > 3:

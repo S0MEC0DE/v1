@@ -1,8 +1,8 @@
+import matplotlib.pylab as plt
+import seaborn as sns
+import numpy as np
+
 def hist_plot(data):
-    
-    import matplotlib.pylab as plt
-    import seaborn as sns
-    import numpy as np
 
     sns.set_context("notebook", font_scale=1.5, rc={"lines.linewidth": 0})
 

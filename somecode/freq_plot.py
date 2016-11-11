@@ -2,9 +2,12 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-from stopword import stopword 
+from somecode import stopword
+import pretty as pretty 
 
 def freq_plot(data,stop_words="",color="steelblue"):
+    
+    pretty.warnings()
     
     tweet_text = data.text.str.replace('[^A-Za-z0-9@#]+', " ")
     words_keyword = pd.Series(' '.join(tweet_text).lower().split())
@@ -16,7 +19,7 @@ def freq_plot(data,stop_words="",color="steelblue"):
     l = []
     for word in words_keyword:
         if word not in stop_words:
-            if word not in stopword():
+            if word not in stopword.stopword():
                 if len(word) > 2:
                     l.append(word)
 

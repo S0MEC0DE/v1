@@ -1,8 +1,8 @@
+import pandas as pd
+import tweepy
+from somecode import data_frame
+
 def search(query,max_tweets=200,language='en'):
-    
-    import pandas as pd
-    import tweepy
-    from data_frame import data_frame
 
     access_token = "731718844264251392-n4NiVuKrDyCRNSVttgl9KM7QgUy9Gcx"
     access_secret = "NxGnlIa08eVgbuyh5sznphCGHuMQ3A8ES1jO2YqFIJ1zA"

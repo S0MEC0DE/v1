@@ -1,7 +1,7 @@
-def key():
+from random import randint
+import pandas as pd
 
-    from random import randint
-    import pandas as pd
+def key():
     
     di = {}
     

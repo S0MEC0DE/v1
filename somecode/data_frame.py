@@ -1,8 +1,14 @@
+import pandas as pd
+import numpy as np
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
 def data_frame(data):
 
-    import pandas as pd
-    import numpy as np
-    from nltk.sentiment.vader import SentimentIntensityAnalyzer
+    try:
+        nltk.download('vader_lexicon')
+
+    except:
+        pass
 
     try:
         df1 = pd.DataFrame([[tweet.user.statuses_count, 

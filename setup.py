@@ -25,7 +25,7 @@ MAINTAINER_EMAIL = 'mailme@mikkokotila.com'
 URL = 'http://botlab.io'
 LICENSE = 'MIT'
 DOWNLOAD_URL = 'https://github.com/S0MEC0DE/'
-VERSION = '0.9'
+VERSION = '0.9.9'
 
 try:
     from setuptools import setup
@@ -46,7 +46,7 @@ def check_dependencies():
     try:
         import seaborn
     except ImportError:
-        install_requires.append('scipy')
+        install_requires.append('seaborn')
     try:
         import matplotlib
     except ImportError:
@@ -59,6 +59,20 @@ def check_dependencies():
         import nltk
     except ImportError:
         install_requires.append('nltk')
+    try:
+        import tweepy
+    except ImportError:
+        install_requires.append('tweepy')
+    try:
+        import twython
+    except ImportError:
+        install_requires.append('twython')
+    try:
+        import IPython
+    except ImportError:
+        install_requires.append('IPython')
+
+    install_requires.append('python-tk')
 
     return install_requires
 
@@ -82,7 +96,6 @@ if __name__ == "__main__":
         classifiers=[
                      'Intended Audience :: Science/Research',
                      'Programming Language :: Python :: 2.7',
-                     'License :: OSI Approved :: MIT',
                      'Operating System :: POSIX',
                      'Operating System :: Unix',
                      'Operating System :: MacOS'],

@@ -1,7 +1,7 @@
-def keywords(data):
+import entropy
+import pandas as pd
 
-    import entropy
-    import pandas as pd
+def keywords(data):
     
     ## retweet_count
 

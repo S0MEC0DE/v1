@@ -4,7 +4,7 @@ from tweepy import Stream
 from tweepy.streaming import StreamListener
 import json
 
-from keys import key
+from somecode import key
 
 def stream(items,kind="keywords",filename=''):
 

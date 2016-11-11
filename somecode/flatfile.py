@@ -1,6 +1,7 @@
 import pandas as pd
-from data_frame import data_frame
-from data_prep import data_prep
+
+from somecode import data_frame
+from somecode import data_prep
 
 def flatfile(filename='somecode_tweets.json'):
     

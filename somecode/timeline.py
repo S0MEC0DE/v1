@@ -1,8 +1,8 @@
 import pandas as pd
 import tweepy
 
-from data_frame import data_frame
-from keys import key
+from somecode import data_frame
+from somecode import key
 
 def timeline(screen_name):
 

@@ -1,7 +1,7 @@
-def neg_plot(data):
+import seaborn as sns
+import matplotlib.pyplot as plt
 
-    import seaborn as sns
-    import matplotlib.pyplot as plt
+def neg_plot(data):
 
     sns.set(style="whitegrid")
     sns.set_context("notebook", font_scale=3, rc={"lines.linewidth": 0.3})

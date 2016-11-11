@@ -1,11 +1,13 @@
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt 
 
-from stopword import stopword
+from somecode import stopword
+import pretty as pretty
 
 def cooc_plot(data,stop_words=""):
 
-    import seaborn as sns
-    import matplotlib.pyplot as plt 
+    pretty.warnings()
 
     tweet_text = data.text.str.replace('[^A-Za-z0-9@#]+', " ")
     words_keyword = pd.Series(' '.join(tweet_text).lower().split())
@@ -17,7 +19,7 @@ def cooc_plot(data,stop_words=""):
     l = []
     for word in words_keyword:
         if word not in stop_words:
-            if word not in stopword():
+            if word not in stopword.stopword():
                 if len(word) > 2:
                     l.append(word)
 
