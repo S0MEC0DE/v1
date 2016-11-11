@@ -268,6 +268,18 @@ For the Pretty descriptive tables:
 | pretty.warnings()      | Turns of warnings       |
 +------------------------+-------------------------+
 
+
+-----
+PLOTS
+-----
+
+When you are on Jupyter, on the first line you must declare::
+
+	%matplotlib inline 
+
+Otherwise you will not see the plots. 
+
+
 -----------
 PERFORMANCE
 -----------
