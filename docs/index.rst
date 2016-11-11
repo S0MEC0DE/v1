@@ -197,26 +197,36 @@ To get tweets from a file::
 
 	some.flatfile("some_stream.json")
 
-search()
-........
 
-An example of use to get 1000 tweets for keyword "election"::
+---------------
+DATA PROCESSING
+---------------
 
-    some.search("hillary",1000)
+While it is possible to call any of the 20 or so modules included in Somecode as standalone functions, the 'data processing' modules are a little different in the sense that they are not called directly with the exception of keywords() which makes sense also to call directly. 
 
-search() has three parameters: 
++------------------------+-------------------------+-------------------------+
+|                        |                         |                         |
+| FUNCTION               | REQUIRED PARAMETERS     | COMMENTS                |
++========================+=========================+=========================+
+| data_frame()           | Somecode dataframe      | max 3200 tweets         |
++------------------------+-------------------------+-------------------------+
+| data_prep()            | Somecode dataframe      | Just for flatfile()     |
++------------------------+-------------------------+-------------------------+
+| keywords()             | Any series with text    | basic keyword stats     |
++------------------------+-------------------------+-------------------------+
 
-+------------------------+-------------+------------+
-| 						 |      	   | 	        |
-| PARAMETER              | DEFAULT     | OPTIONS    |
-+========================+=============+============+
-| keyword                |  *          | 1  or list |
-+------------------------+-------------+------------+
-| max_tweets             | 200         | 0 - 3200   |
-+------------------------+-------------+------------+
-| language               | 'en'        | any        |
-+------------------------+-------------+------------+
 
-(*)required input
+To compute entropy and other singals for textual data:: 
+
+	some.keywords(df)
+
+Various additional semantic analysis is conducted in cooc_plot() reporting function. 
+
+
+---------
+REPORTING
+---------
+
+
 
 
