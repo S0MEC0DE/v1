@@ -286,6 +286,15 @@ PERFORMANCE
 
 During the 2016 election, SOMECODE topical, sentiment, scoring and other computations have been tested in up to 200,000 tweets per hour volume using a single $50 per month server (8gb RAM) where the computations required for every 10 minute cycle were generally completed in 20 seconds. 
 
+-------
+UPGRADE
+-------
+
+At anytime, you can update the current version of SOMECODE::
+	
+	sudo pip install somecode --upgrade
+
+
 --------
 BUILT ON
 --------
