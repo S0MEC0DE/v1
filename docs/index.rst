@@ -23,7 +23,6 @@ With one command from idea to looking at results of regression analysis, advance
 
 SOMECODE is built by researchers for researchers and is very easy to extend / customize to suit specific needs. For most research scopes SOMECODE will work "out of the box". It has very few depedencies (below) and takes minutes to deploy for your first research project.
 
----------------
 GETTING STARTED
 ---------------
 
@@ -53,11 +52,11 @@ During the 2016 election, SOMECODE topical, sentiment, scoring and other computa
 
 
 ---------
-x. FUNCTIONS
+FUNCTIONS
 ---------
 
-x.x. DATAPOINTS
------------ 
+DATAPOINTS
+---------- 
 
 All of the 'data collection' methods ('search','stream','timeline','flatfile') return a pandas dataframe with direct signals from Twitter, together with SOMECODE scores and other inferred metrics.::
 
@@ -85,32 +84,49 @@ All of the 'data collection' methods ('search','stream','timeline','flatfile') r
     neg                           float64
     pos                           float64
 
-
 DATA COLLECTION
 ---------------
 
-There are four ways to get data in to SOMECODE: 
+There are four ways to get data in to SOMECODE. 
 
 - a one-time search (use Twitter Rest API
 - stream for some time (use Twitter streaming API)
 - timeline search 
-- 
+- loading from a file
+
+# search()
+
+An example of use to get 1000 tweets for keyword "election"::
+
+    some.search("hillary",1000)
+
+search() has three parameters: 
+
+keyword 
+max_tweets 
+language (by default
 
 
-search()
++------------------------+-------------+------------+
+| Header row, column 1   | Default     | notes      |
+| (header rows optional) |             |            |
++========================+=============+============+
+| keyword                | *           | 1  or list |
++------------------------+-------------+------------+
+| max_tweets             | 200         | 0 - 3200   |
++------------------------+-------------+------------+
+| language               | 'en'        | any        |
++------------------------+-------------+------------+
+
+(*)required input
+
 stream()
 flatfile()
 timeline()
 
-search()
+Example use
 
-
-Example use::
-
-    search("election",1000)
-
-This will search for 1000 latest tweets for keyword "election" and return a pandas dataframe with the following fields:: 
-
+search("election",1000)
 
 items = single keyword, single user, list of keywords, list of users
 kind = either 'user' or 'keyword' (default is 'keyword')
