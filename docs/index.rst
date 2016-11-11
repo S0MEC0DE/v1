@@ -19,7 +19,8 @@ Somecode is great for researching a variety of topics, for example:
 - Brands and organizations 
 - Special events (e.g. election) 
 - Emerging or ongoing crisis 
-- Ideas (e.g. radicalization) 
+- Ideas (e.g. radicalization)
+- Websites and communities
 
 Somecode comes with built-in scoring system and various signals that are specifically targeted at identifying bot, spam and troll accounts in Twitter, to help researchers better understand malicious techniques used in computer-aided propaganda. 
 
@@ -52,6 +53,29 @@ Depending on the need of the researcher at the time of use, a typical scenario i
 3. Based on the findings, use one of the 'data collectors' to get drill-down data 
 
 4. Export report and dataset for reference / later use 
+
+
+---------------
+GETTING STARTED
+---------------
+
+DESKTOP:
+........
+
+SOMECODE runs on any regular low-end laptop with a common web browser. Tested on Linux and Mac OS X. Jupyter is highly recommended. 
+
+SERVER/CLOUD:
+.............
+
+SOMECODE runs on Amazon Nano (or similar) for $5 per month. Tested on Ubuntu 14.04LTS
+
+For both options::
+
+    pip install somecode 
+
+SOMECODE is very easy to customize / extend if you would feel the need to do it. Even if you are a beginner python learner.
+
+100% fun, 0% mindless wrangling.
 
 
 --------
@@ -126,47 +150,37 @@ All of the 'data collection' methods ('search','stream','timeline','flatfile') r
 | pos                    | sentiment   | any        |
 +------------------------+-------------+------------+
 
-GETTING STARTED
----------------
-
-DESKTOP:
-........
-
-SOMECODE runs on any regular low-end laptop with a common web browser. Tested on Linux and Mac OS X. Jupyter is highly recommended. 
-
-SERVER/CLOUD:
-.............
-
-SOMECODE runs on Amazon Nano (or similar) for $5 per month. Tested on Ubuntu 14.04LTS
-
-For both options::
-
-    pip install somecode 
-
-SOMECODE is very easy to customize / extend if you would feel the need to do it. Even if you are a beginner python learner.
-
-100% fun, 0% mindless wrangling.
-
------------
-PERFORMANCE
------------
-
-During the 2016 election, SOMECODE topical, sentiment, scoring and other computations have been tested in up to 200,000 tweets per hour volume using a single $50 per month server (8gb RAM) where the computations required for every 10 minute cycle were generally completed in 20 seconds. 
-
 
 ---------
 FUNCTIONS
 ---------
+
+There are four categories of functions in SOMECODE: 
+
+- Data Collection
+- Data Processing
+- Reporting 
+- Export 
+
 
 DATA COLLECTION
 ---------------
 
 There are four ways to get data in to SOMECODE. 
 
-- a one-time search (use Twitter Rest API
-- stream for some time (use Twitter streaming API)
-- timeline search 
-- loading from a file
++------------------------+-------------------------+-------------------------+
+|                        |                         |                         |
+| FUNCTION               | REQUIRED PARAMETERS     | DATA SIZE               |
++========================+=========================+=========================+
+| search()               | keyword                 | max 3200 tweets         |
++------------------------+-------------------------+-------------------------+
+| stream()               | keyword or userid       | up to 100 per second    |
++------------------------+-------------------------+-------------------------+
+| timeline()             | handle                  | up to 3200 tweets       |
++------------------------+-------------------------+-------------------------+
+| flatfile()             | filename                | any size                |
++------------------------+-------------------------+-------------------------+
+
 
 # search()
 
@@ -175,11 +189,6 @@ An example of use to get 1000 tweets for keyword "election"::
     some.search("hillary",1000)
 
 search() has three parameters: 
-
-keyword 
-max_tweets 
-language (by default
-
 
 +------------------------+-------------+------------+
 | Header row, column 1   | Default     | notes      |
@@ -193,6 +202,18 @@ language (by default
 +------------------------+-------------+------------+
 
 (*)required input
+
+
+# stream()
+
+
+
+
+
+
+
+
+
 
 stream()
 flatfile()
@@ -215,25 +236,23 @@ keywords = ['hillary','trump']
 
 
 DATA PROCESSING
-...............
+---------------
 
 REPORTING
-.........
+---------
+
+EXPORT
+------
 
 
-Some of the things SOMECODE takes care for you:
 
-- data structures
-- datatypes
-- character types
-- system performance
-- API rate-limit management
-- JSON parsing
-- pipeline process automation
-- plot configuration
-- exception handling
+-----------
+PERFORMANCE
+-----------
 
+During the 2016 election, SOMECODE topical, sentiment, scoring and other computations have been tested in up to 200,000 tweets per hour volume using a single $50 per month server (8gb RAM) where the computations required for every 10 minute cycle were generally completed in 20 seconds. 
 
+--------
 BUILT ON
 --------
 
