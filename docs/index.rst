@@ -59,13 +59,13 @@ Depending on the need of the researcher at the time of use, a typical scenario i
 GETTING STARTED
 ---------------
 
-DESKTOP:
-........
+DESKTOP
+.......
 
 SOMECODE runs on any regular low-end laptop with a common web browser. Tested on Linux and Mac OS X. Jupyter is highly recommended. 
 
-SERVER/CLOUD:
-.............
+SERVER/CLOUD
+............
 
 SOMECODE runs on Amazon Nano (or similar) for $5 per month. Tested on Ubuntu 14.04LTS
 
